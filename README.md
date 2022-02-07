@@ -1,11 +1,11 @@
 # README
 
-* Ruby version = 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x64-mingw32]
+* Ruby version = 3.0.3
 
 * Rails version = 7.0.1
 
-* System dependencies = "devise", "cancancan", "carrierwave"
+* System dependencies = "devise (4.8.1)", "cancancan (3.3.0)", "carrierwave (2.2.2)"
 
-* Database creation = "postgresql (14.1)
+* Database creation = "postgresql (1.3.1)
 
 
