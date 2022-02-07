@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Usuários</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th></th>
+      <th colspam="3"></th>
+      <th colspam="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.description %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "Mostrar", user, class: "rLink" %></td>
+        <td><%= link_to "Editar", edit_user_path(user), class: "rLink" %></td>
+        <td><%= link_to "Apagar", user, method: :delete, class: "rLink", data: { confirm: "Você tem certeza?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Novo", new_user_path, class: "btn btn-dark" %>

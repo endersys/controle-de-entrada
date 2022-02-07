@@ -1,0 +1,22 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= user.description %>
+  </p>
+
+  <div>
+    <strong>Tipo:</strong>
+    <% if user.admin? %>
+      <p style="display: inline">Administrador</p>
+    <% end %>
+
+    <% if user.atendente? %>
+      <p style="display: inline">Atendente</p>
+    <% end %>
+
+    <% if user.funcionario? %>
+      <p style="display: inline">Funcionário</p>
+    <% end %>
+  </div>
+
+</div>

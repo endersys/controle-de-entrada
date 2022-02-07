@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @unit %>
+
+<div>
+  <%= link_to "Editar", edit_unit_path(@unit), class: "btn btn-dark" %>
+  <%= link_to "Voltar", units_path, class: "btn btn-dark" %>
+
+  <br><br>
+  
+  <%= button_to "Apagar esta unidade", @unit, class: "btn btn-dark", method: :delete %>
+</div>

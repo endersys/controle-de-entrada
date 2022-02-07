@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @visitor %>
+
+<div>
+  <%= link_to "Editar", edit_visitor_path(@visitor), class: "btn btn-dark" %> 
+  <%= link_to "Voltar", visitors_path, class: "btn btn-dark" %>
+
+  <br><br>
+
+  <%= button_to "Deletar este visitante", @visitor, class: "btn btn-dark", method: :delete %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visitor: one
+  unit: one
+  sector: one
+  status: 1
+  visit_date: 2022-02-04
+  visit_moment: 2022-02-04 18:45:18
+
+two:
+  visitor: two
+  unit: two
+  sector: two
+  status: 1
+  visit_date: 2022-02-04
+  visit_moment: 2022-02-04 18:45:18

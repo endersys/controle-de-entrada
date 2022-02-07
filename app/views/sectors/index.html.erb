@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Setores</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Unidade</th>
+      <th colspam></th>
+      <th colspam></th>
+      <th colspam></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sectors.each do |sector| %>
+      <tr>
+        <td><%= sector.description %></td>
+        <td><%= sector.unit.description %></td>
+        <td><%= link_to "Mostrar", sector, class: "rLink" %></td>
+        <td><%= link_to "Editar", edit_sector_path(sector), class: "rLink" %></td>
+        <td><%= link_to "Apagar", sector, class: "rLink", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Novo", new_sector_path, class: "btn btn-dark" %>

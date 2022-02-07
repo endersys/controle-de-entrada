@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Unidades</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Nome</th>
+      <th colspam></th>
+      <th colspam></th>
+      <th colspam></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @units.each do |unit| %>
+      <tr>
+        <td><%= unit.description %></td>
+        <td><%= link_to "Mostrar", unit, class: "rLink" %></td>
+        <td><%= link_to "Editar", edit_unit_path(unit), class: "rLink" %></td>
+        <td><%= link_to "Apagar", unit, class: "rLink", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Novo", new_unit_path, class: "btn btn-dark" %>

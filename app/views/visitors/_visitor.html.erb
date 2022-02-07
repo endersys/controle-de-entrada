@@ -1,0 +1,27 @@
+<div id="<%= dom_id visitor %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= visitor.description %>
+  </p>
+
+  <p>
+    <strong>Cpf:</strong>
+    <%= visitor.cpf %>
+  </p>
+
+  <p>
+    <strong>Rg:</strong>
+    <%= visitor.rg %>
+  </p>
+
+  <p>
+    <strong>Telefone:</strong>
+    <%= visitor.phone %>
+  </p>
+
+  <p>
+    <strong>Foto:</strong>
+    <%= image_tag(visitor.photo.to_s, size: "40x40", style: "border-radius: 30%") %>
+  </p>
+
+</div>

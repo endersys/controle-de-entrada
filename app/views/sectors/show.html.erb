@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sector %>
+
+<div>
+  <%= link_to "Editar", edit_sector_path(@sector), class: "btn btn-dark" %>
+  <%= link_to "Voltar", sectors_path, class: "btn btn-dark" %>
+  <br><br>
+  <%= button_to "Apagar este setor", @sector, class: "btn btn-dark", method: :delete %>
+</div>

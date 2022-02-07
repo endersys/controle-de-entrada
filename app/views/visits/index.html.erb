@@ -1,0 +1,50 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Visitas</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Visitante</th>
+      <th>CPF</th>
+      <th>RG</th>
+      <th>Unidade</th>
+      <th>Setor</th>
+      <th>Status</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th colspam="3"></th>
+      <th colspam="3"></th>
+      <th colspam="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @visits.each do |visit| %>
+      <tr>
+        <td><%= visit.visitor.description %></td>
+        <td><%= visit.visitor.cpf %></td>
+        <td><%= visit.visitor.rg %></td>
+        <td><%= visit.unit.description %></td>
+        <td><%= visit.sector.description %></td>
+        <td><%= visit.status %></td>
+        <td><%= date_to_br_format(visit.visit_date) %></td>
+        <td><%= hour_to_br_format(visit.visit_moment) %></td>
+
+        <% if can? :manage, Visit %>
+          <td><%= link_to "Mostrar", visit, class: "rLink" %></td>
+          <td><%= link_to "Editar", edit_visit_path(visit), class: "rLink" %></td>
+          <td><%= link_to "Apagar", visit, class: "rLink", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+        <% else %>
+          <td><%= link_to "Mostrar", visit, class: "rLink" %></td>
+          <td><%= link_to "Editar", edit_visit_path(visit), class: "rLink" %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if can? :create, Visit %>
+  <%= link_to "Novo", new_visit_path, class: "btn btn-dark" %>
+<% end %>
+
+

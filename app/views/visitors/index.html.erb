@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Visitantes</h1>
+
+<%= form_tag(visitors_path, method: :get) do %>
+  <%= text_field_tag "search", nil, placeholder: "Pesquisa cpf" %>
+  <%= submit_tag "Pesquisar", class: "btn btn-dark"%>
+<% end %>
+<br>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>RG</th>
+      <th>Telefone</th>
+      <th>Foto</th>
+      <th colspam="3"></th>
+      <th colspam="3"></th>
+      <th colspam="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @visitors.each do |visitor| %>
+      <tr>
+        <td><%= visitor.id %></td>
+        <td><%= visitor.description %></td>
+        <td><%= visitor.cpf %></td>
+        <td><%= visitor.rg %></td>
+        <td><%= visitor.phone %></td>
+        <td><%= image_tag(visitor.photo.to_s, size: "40x40", style: "border-radius: 30%") %></td>
+        <td><%= link_to "Mostrar", visitor, class: "rLink" %></td>
+        <td><%= link_to "Editar", edit_visitor_path(visitor), class: "rLink" %></td>
+        <td><%= link_to "Apagar", visitor, method: :delete, class: "rLink", data: { confirm: "Você tem certeza?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "Novo", new_visitor_path, class: "btn btn-dark" %>
+
+

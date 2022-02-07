@@ -1,0 +1,26 @@
+<div id="<%= dom_id visit %>">
+  <p>
+    <strong>Visitante:</strong>
+    <%= visit.visitor.description %>
+  </p>
+  <p>
+    <strong>Unidade:</strong>
+    <%= visit.unit.description %>
+  </p>
+  <p>
+    <strong>Setor:</strong>
+    <%= visit.sector.description %>
+  </p>
+  <p>
+    <strong>Status:</strong>
+    <%= visit.status %>
+  </p>
+  <p>
+    <strong>Data da Visita:</strong>
+    <%= date_to_br_format(visit.visit_date) %>
+  </p>
+  <p>
+    <strong>Hora da Visita:</strong>
+    <%= hour_to_br_format(visit.visit_moment) %>
+  </p>
+</div>
