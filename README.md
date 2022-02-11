@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version = 3.0.3
 
-Things you may want to cover:
+* Rails version = 7.0.1
 
-* Ruby version
+* System dependencies = "devise (4.8.1)", "cancancan (3.3.0)", "carrierwave (2.2.2)"
 
-* System dependencies
+* Database creation = "postgresql (1.3.1)
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
