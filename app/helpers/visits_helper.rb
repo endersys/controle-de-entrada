@@ -3,7 +3,7 @@ module VisitsHelper
         date.strftime("%d/%m/%Y")
     end
 
-    def hour_to_br_format(hour)
-        hour.strftime("%H:%M:%S")
+    def hour_to_br_format(time)
+        time.strftime("%H:%M:%S")
     end
 end
