@@ -1,4 +1,5 @@
 # README
+* First of all, run the db:seed task to add the users
 
 * Ruby version = 3.0.3
 
