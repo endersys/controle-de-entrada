@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # README
 
-* Ruby version = 3.0.3
+* Ruby version = 3.1.0
 
 * Rails version = 7.0.1
 
