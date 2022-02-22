@@ -17,9 +17,9 @@
       <tr>
         <td><%= user.description %></td>
         <td><%= user.email %></td>
-        <td><%= link_to "Mostrar", user, class: "rLink" %></td>
-        <td><%= link_to "Editar", edit_user_path(user), class: "rLink" %></td>
-        <td><%= link_to "Apagar", user, method: :delete, class: "rLink", data: { confirm: "Você tem certeza?" } %></td>
+        <td><%= link_to "Mostrar", user, class: "btn btn-dark" %></td>
+        <td><%= link_to "Editar", edit_user_path(user), class: "btn btn-dark" %></td>
+        <td><%= link_to "Apagar", user, method: :delete, class: "btn btn-dark", data: { confirm: "Você tem certeza?" } %></td>
       </tr>
     <% end %>
   </tbody>

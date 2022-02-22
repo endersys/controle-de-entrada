@@ -6,6 +6,14 @@ class VisitsController < ApplicationController
   # GET /visits or /visits.json
   def index
     @visits = Visit.all
+
+    if params[:id]
+      @visit_status = Visit.find(params[:id])
+      if @visit_status.espera?
+        @visit_status.realizada!
+        flash.now[:notice] = "Visita finalizada com sucesso!"
+      end
+    end
   end
 
   # GET /visits/1 or /visits/1.json
@@ -59,8 +67,13 @@ class VisitsController < ApplicationController
     end
   end
 
+  
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+    def set_status
+      @visita.status = get_status
+    end
+
     def set_visit
       @visit = Visit.find(params[:id])
     end

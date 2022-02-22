@@ -21,7 +21,7 @@
               <%= link_to "Setores", sectors_path, class: "nav-link" %>
             </li>
             <li class="nav-item nav-link">
-              <strong>Usuário: </strong><%= current_user.description %> - <strong>Administrador</strong>
+              <strong>Usuário: </strong><%= current_user.description %>
             </li>
           <% elsif current_user.atendente %>
             <li class="nav-item">
@@ -31,14 +31,14 @@
               <%= link_to "Visitas", visits_path, class: "nav-link" %>
             </li>
             <li class="nav-item nav-link">
-              <strong>Usuário: </strong><%= current_user.description %> - <strong>Atendente</strong>
+              <strong>Usuário: </strong><%= current_user.description %>
             </li>
           <% else %>
             <li class="nav-item">
               <%= link_to "Visitas", visits_path, class: "nav-link" %>
             </li>
             <li class="nav-item nav-link">
-              <strong>Usuário: </strong><%= current_user.description %> - <strong>Funcionário</strong>
+              <strong>Usuário: </strong><%= current_user.description %>
             </li>
           <% end %>
           <li>

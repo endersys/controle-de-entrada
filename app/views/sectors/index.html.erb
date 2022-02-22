@@ -17,9 +17,9 @@
       <tr>
         <td><%= sector.description %></td>
         <td><%= sector.unit.description %></td>
-        <td><%= link_to "Mostrar", sector, class: "rLink" %></td>
-        <td><%= link_to "Editar", edit_sector_path(sector), class: "rLink" %></td>
-        <td><%= link_to "Apagar", sector, class: "rLink", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+        <td><%= link_to "Mostrar", sector, class: "btn btn-dark" %></td>
+        <td><%= link_to "Editar", edit_sector_path(sector), class: "btn btn-dark" %></td>
+        <td><%= link_to "Apagar", sector, class: "btn btn-dark", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
       </tr>
     <% end %>
   </tbody>

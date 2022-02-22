@@ -26,17 +26,19 @@
         <td><%= visit.visitor.rg %></td>
         <td><%= visit.unit.description %></td>
         <td><%= visit.sector.description %></td>
-        <td><%= visit.status %></td>
+        <td><%= visit.status.capitalize %></td>
         <td><%= date_to_br_format(visit.visit_date) %></td>
         <td><%= hour_to_br_format(visit.visit_moment) %></td>
 
         <% if can? :manage, Visit %>
-          <td><%= link_to "Mostrar", visit, class: "rLink" %></td>
-          <td><%= link_to "Editar", edit_visit_path(visit), class: "rLink" %></td>
-          <td><%= link_to "Apagar", visit, class: "rLink", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
+          <td><%= link_to "Mostrar", visit, class: "btn btn-dark" %></td>
+          <td><%= link_to "Editar", edit_visit_path(visit), class: "btn btn-dark" %></td>
+          <td><%= link_to "Apagar", visit, class: "btn btn-dark", method: :delete, data: { confirm: "Você tem certeza?" } %></td>
         <% else %>
-          <td><%= link_to "Mostrar", visit, class: "rLink" %></td>
-          <td><%= link_to "Editar", edit_visit_path(visit), class: "rLink" %></td>
+          <td><%= link_to "Mostrar", visit, class: "btn btn-dark" %></td>
+          <% if visit.status == "espera" %>
+            <td><%= link_to "Realizar", visits_path(id: visit), class: "btn btn-dark" %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
@@ -46,5 +48,4 @@
 <% if can? :create, Visit %>
   <%= link_to "Novo", new_visit_path, class: "btn btn-dark" %>
 <% end %>
-
 

@@ -30,9 +30,9 @@
         <td><%= visitor.rg %></td>
         <td><%= visitor.phone %></td>
         <td><%= image_tag(visitor.photo.to_s, size: "40x40", style: "border-radius: 30%") %></td>
-        <td><%= link_to "Mostrar", visitor, class: "rLink" %></td>
-        <td><%= link_to "Editar", edit_visitor_path(visitor), class: "rLink" %></td>
-        <td><%= link_to "Apagar", visitor, method: :delete, class: "rLink", data: { confirm: "Você tem certeza?" } %></td>
+        <td><%= link_to "Mostrar", visitor, class: "btn btn-dark" %></td>
+        <td><%= link_to "Editar", edit_visitor_path(visitor), class: "btn btn-dark" %></td>
+        <td><%= link_to "Apagar", visitor, method: :delete, class: "btn btn-dark", data: { confirm: "Você tem certeza?" } %></td>
       </tr>
     <% end %>
   </tbody>
